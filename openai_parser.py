@@ -1,6 +1,8 @@
-import openai
+import openai, os, dotenv
 
-openai.api_key = "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"
+dotenv.load_dotenv()
+
+openai.api_key = os.getenv("API")
 
 msg = [{"role": "system", "content": 'веди себя как мой друг,твое имя Радик'}]
 
